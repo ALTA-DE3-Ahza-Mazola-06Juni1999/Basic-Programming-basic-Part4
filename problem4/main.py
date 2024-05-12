@@ -1,5 +1,13 @@
 def ubah_huruf(sentence):
     pattern = ""
+    huruf1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    huruf2 ="KLMNOPQRSTUVWXYZABCDEFGHIJ"
+    for i in range(len(sentence)):
+        if sentence[i] in huruf1:
+            convert = huruf2[huruf1.index(sentence[i])]
+        else:
+            convert = sentence[i]
+        pattern += convert
     return pattern
 
 if __name__ == '__main__':
